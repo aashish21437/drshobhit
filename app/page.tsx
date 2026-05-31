@@ -109,7 +109,7 @@ export default function DoctorProfile() {
   const handleShare = async () => {
     const shareData = {
       title: 'Dr. Shobhit - M.D. Physician',
-      text: 'M.D. Physician. Runs private evening practice at Adult & Child Care Clinic, Rohini, Delhi.',
+      text: 'M.D. Physician & Specialist Medical Officer at BLK MAX Super Speciality Hospital. Runs private practice at Adult & Child Care, Rohini, Delhi.',
       url: typeof window !== 'undefined' ? window.location.href : 'https://www.drshobhit.com',
     };
 
@@ -196,15 +196,18 @@ export default function DoctorProfile() {
                   <p className="text-xl text-teal-100 font-medium mb-1">
                     M.D. Physician
                   </p>
-                  <p className="text-lg text-teal-200/80 mb-4 flex items-center justify-center md:justify-start gap-2">
+                  <p className="text-lg text-teal-200/80 mb-1 flex items-center justify-center md:justify-start gap-2">
                     <IconHeart />
                     Adult & Child Care (General Practice)
+                  </p>
+                  <p className="text-sm text-teal-200/60 mb-4 flex items-center justify-center md:justify-start gap-2">
+                    🏥 Specialist Medical Officer, BLK MAX Super Speciality Hospital
                   </p>
 
                   <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mt-2">
                     <span className="inline-flex items-center gap-1.5 bg-slate-800 border border-slate-700 text-white px-4 py-1.5 rounded-full text-sm font-medium">
                       <IconBriefcase />
-                      Experience: 15+ Years
+                      Experience: 20+ Years
                     </span>
                     <button
                       onClick={handleShare}
@@ -235,18 +238,102 @@ export default function DoctorProfile() {
               <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
                 <h2 id="about" className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">About Dr. Shobhit</h2>
                 <div className="space-y-4">
-                  <StaticCardItem title="Work Experience" icon={<IconBriefcase />}>
-                    <ul className="list-disc pl-5 space-y-2">
-                      <li className="text-gray-700 font-medium">Consulting Physician & Founder</li>
-                      <li className="text-sm text-gray-500 list-none ml-2">Adult & Child Care Clinic, Rohini, New Delhi (Private Practice)</li>
-                    </ul>
+                  <StaticCardItem title="Professional History & Experience" icon={<IconBriefcase />}>
+                    <div className="space-y-6 relative before:absolute before:inset-0 before:left-3 before:w-0.5 before:bg-teal-100/70">
+                      
+                      {/* Current Roles */}
+                      <div className="relative pl-8">
+                        <div className="absolute left-1.5 top-1.5 w-3.5 h-3.5 rounded-full bg-teal-600 ring-4 ring-teal-100"></div>
+                        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-1">
+                          <span className="text-gray-900 font-bold text-base">Consulting Physician & Founder</span>
+                          <span className="inline-flex items-center bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-full w-fit">
+                            Present
+                          </span>
+                        </div>
+                        <p className="text-sm font-semibold text-teal-600 mt-0.5">Adult & Child Care</p>
+                        <p className="text-sm text-gray-500 mt-1">Private Practice, G-12/20, Sector-15, Rohini, Delhi-110089</p>
+                      </div>
+
+                      <div className="relative pl-8">
+                        <div className="absolute left-1.5 top-1.5 w-3.5 h-3.5 rounded-full bg-teal-600 ring-4 ring-teal-100"></div>
+                        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-1">
+                          <span className="text-gray-900 font-bold text-base">Specialist Medical Officer</span>
+                          <span className="inline-flex items-center bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-full w-fit">
+                            Apr 2012 - Present
+                          </span>
+                        </div>
+                        <p className="text-sm font-semibold text-teal-600 mt-0.5">BLK MAX Super Speciality Hospital</p>
+                        <p className="text-sm text-gray-500 mt-1">Serving as Specialist Medical Officer since April 2012.</p>
+                      </div>
+
+                      {/* Past Roles */}
+                      <div className="relative pl-8">
+                        <div className="absolute left-1.5 top-1.5 w-3.5 h-3.5 rounded-full bg-gray-400 ring-4 ring-gray-100"></div>
+                        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-1">
+                          <span className="text-gray-800 font-semibold text-base">Senior Resident</span>
+                          <span className="inline-flex items-center bg-gray-50 text-gray-600 text-xs font-semibold px-2.5 py-1 rounded-full w-fit">
+                            Mar 2008 - 2012
+                          </span>
+                        </div>
+                        <p className="text-sm font-semibold text-gray-600 mt-0.5">ESIC Hospital</p>
+                        <p className="text-sm text-gray-500 mt-1">Sec-15, Rohini, Delhi.</p>
+                      </div>
+
+                      <div className="relative pl-8">
+                        <div className="absolute left-1.5 top-1.5 w-3.5 h-3.5 rounded-full bg-gray-400 ring-4 ring-gray-100"></div>
+                        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-1">
+                          <span className="text-gray-800 font-semibold text-base">Junior Resident (Surgery)</span>
+                          <span className="inline-flex items-center bg-gray-50 text-gray-600 text-xs font-semibold px-2.5 py-1 rounded-full w-fit">
+                            Sep 2007 - Feb 2008
+                          </span>
+                        </div>
+                        <p className="text-sm font-semibold text-gray-600 mt-0.5">Hindu Rao Hospital</p>
+                        <p className="text-sm text-gray-500 mt-1">Delhi.</p>
+                      </div>
+
+                      <div className="relative pl-8">
+                        <div className="absolute left-1.5 top-1.5 w-3.5 h-3.5 rounded-full bg-gray-400 ring-4 ring-gray-100"></div>
+                        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-1">
+                          <span className="text-gray-800 font-semibold text-base">Junior Resident (Paediatrics)</span>
+                          <span className="inline-flex items-center bg-gray-50 text-gray-600 text-xs font-semibold px-2.5 py-1 rounded-full w-fit">
+                            Jul 2006 - Aug 2007
+                          </span>
+                        </div>
+                        <p className="text-sm font-semibold text-gray-600 mt-0.5">Dr. Ram Manohar Lohia Hospital</p>
+                        <p className="text-sm text-gray-500 mt-1">Delhi.</p>
+                      </div>
+
+                    </div>
                   </StaticCardItem>
 
                   <StaticCardItem title="Education & Qualifications" icon={<IconAcademic />}>
-                    <ul className="list-disc pl-5 space-y-2">
-                      <li><strong>M.D. Physician</strong> - Advanced general physician studies for adult and pediatric primary healthcare.</li>
-                      <li><strong>DMC Registered</strong> - Officially registered practitioner under the Delhi Medical Council (Registration No. 30312).</li>
-                    </ul>
+                    <div className="space-y-5">
+                      <div className="flex items-start gap-3">
+                        <span className="text-teal-600 mt-1 font-semibold text-lg">•</span>
+                        <div>
+                          <p className="font-semibold text-gray-900">M.D. Physician</p>
+                          <p className="text-sm text-gray-500">Completed in 2001 — Lugansk State Medical University, Ukraine.</p>
+                          <p className="text-xs text-gray-400 mt-0.5">Advanced medical training specializing in comprehensive diagnosis, internal medicine, and patient care.</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-3">
+                        <span className="text-teal-600 mt-1 font-semibold text-lg">•</span>
+                        <div>
+                          <p className="font-semibold text-gray-900">Medical Council Registrations</p>
+                          <div className="mt-2 space-y-2">
+                            <div className="flex flex-wrap items-center gap-2">
+                              <span className="text-xs font-semibold bg-teal-50 text-teal-800 px-2 py-0.5 rounded border border-teal-100">DMC No. 30312</span>
+                              <span className="text-xs text-gray-500">Delhi Medical Council (Registered 10/05/2006, Renewal done in 2017)</span>
+                            </div>
+                            <div className="flex flex-wrap items-center gap-2">
+                              <span className="text-xs font-semibold bg-teal-50 text-teal-800 px-2 py-0.5 rounded border border-teal-100">MCI No. 28024</span>
+                              <span className="text-xs text-gray-500">Medical Council of India (Registered 18-04-2006)</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </StaticCardItem>
 
                   <StaticCardItem title="Clinical Focus & Core Specialities" icon={<IconHeart />}>
@@ -255,6 +342,41 @@ export default function DoctorProfile() {
                       <li><strong>Child Care:</strong> Pediatric consultation, wellness monitoring, common juvenile allergies, seasonal infections, and developmental checks.</li>
                       <li><strong>Preventive Medicine:</strong> Guidance on diet, healthy lifestyle integrations, screening schedules, and community wellness.</li>
                     </ul>
+                  </StaticCardItem>
+
+                  <StaticCardItem title="Professional Strengths" icon={<IconBadge />}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <p className="font-semibold text-gray-800 text-sm flex items-center gap-2">
+                          <span className="text-teal-600 font-bold">✓</span> Clinical Policy & Care
+                        </p>
+                        <p className="text-xs text-gray-500 mt-1">Possesses extensive, up-to-date knowledge of medical guidelines and healthcare policies.</p>
+                      </div>
+                      <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <p className="font-semibold text-gray-800 text-sm flex items-center gap-2">
+                          <span className="text-teal-600 font-bold">✓</span> Strong Communication
+                        </p>
+                        <p className="text-xs text-gray-500 mt-1">Effective command over verbal and written communication with exceptional interpersonal skills.</p>
+                      </div>
+                      <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <p className="font-semibold text-gray-800 text-sm flex items-center gap-2">
+                          <span className="text-teal-600 font-bold">✓</span> Analytical Judgment
+                        </p>
+                        <p className="text-xs text-gray-500 mt-1">Demonstrates sound medical judgment, diagnosis accuracy, and strong analytical skills.</p>
+                      </div>
+                      <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <p className="font-semibold text-gray-800 text-sm flex items-center gap-2">
+                          <span className="text-teal-600 font-bold">✓</span> Resilient & Adaptive
+                        </p>
+                        <p className="text-xs text-gray-500 mt-1">Flexible and highly capable of working effectively under high-pressure clinical environments.</p>
+                      </div>
+                    </div>
+                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 mt-3">
+                      <p className="font-semibold text-gray-800 text-sm flex items-center gap-2">
+                        <span className="text-teal-600 font-bold">✓</span> Multi-Tasking Capability
+                      </p>
+                      <p className="text-xs text-gray-500 mt-1">Proven ability to manage multiple complex tasks, patient cases, and administrative duties simultaneously.</p>
+                    </div>
                   </StaticCardItem>
                 </div>
               </div>
@@ -266,13 +388,13 @@ export default function DoctorProfile() {
                     Booking an appointment is simple. You can fill out the booking form on this website directly, or call the clinic at +91 9312017930 or +91 9818410364 to check timing slots.
                   </AccordionItem>
                   <AccordionItem title="Where does Dr. Shobhit practice?">
-                    Dr. Shobhit conducts his private practice at <strong>Adult & Child Care Clinic</strong> in Rohini, Delhi (G-12/20, Sector-15, Rohini, Delhi-110089) during the evening.
+                    Dr. Shobhit conducts his private practice at <strong>Adult & Child Care</strong> in Rohini, Delhi (G-12/20, Sector-15, Rohini, Delhi-110089) during the evening.
                   </AccordionItem>
                   <AccordionItem title="What are the clinic evening timings?">
-                    The Adult & Child Care Clinic is open in the evenings from <strong>6:30 PM to 9:30 PM</strong>.
+                    Adult & Child Care is open in the evenings from <strong>6:30 PM to 9:30 PM</strong>.
                   </AccordionItem>
                   <AccordionItem title="Is Dr. Shobhit registered with the medical council?">
-                    Yes, Dr. Shobhit is a fully licensed M.D. Physician registered with the Delhi Medical Council (DMC No. 30312).
+                    Yes, Dr. Shobhit is a fully licensed M.D. Physician registered with the Delhi Medical Council (DMC No. 30312) and the Medical Council of India (MCI No. 28024).
                   </AccordionItem>
                 </div>
               </div>
