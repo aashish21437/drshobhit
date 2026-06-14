@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { generateICS } from '@/lib/ics';
 
 export async function POST(request: Request) {
   try {
@@ -134,10 +135,13 @@ export async function POST(request: Request) {
     const info = await transporter.sendMail(mailOptions);
     const previewUrl = nodemailer.getTestMessageUrl(info);
 
+    const icsContent = generateICS({ name, dateTime, whatsapp, purpose });
+
     return NextResponse.json({ 
       success: true, 
       message: 'Booking request sent successfully!',
-      previewUrl: previewUrl || null 
+      previewUrl: previewUrl || null,
+      icsContent
     });
   } catch (error: any) {
     console.error('Booking API Error:', error);
